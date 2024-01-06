@@ -12,3 +12,7 @@ True, False
 
 # float
 3.14, -3.14, 120.12345, -120.12345
+
+# lists
+my_friends = ["Csaba", "Kriszta", "Tamás", "Géza"]
+lucky_numbers = [3, 12, 45, 35, 76]
