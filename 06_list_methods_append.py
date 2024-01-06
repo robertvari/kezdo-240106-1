@@ -6,7 +6,7 @@ number2 = input("Your second number?")
 number3 = input("Your third number?")
 number4 = input("Your fourth number?")
 number5 = input("Your fifth number?")
-
+12
 # add number to the list
 lucky_numbers.append(number1)
 lucky_numbers.append(number2)
