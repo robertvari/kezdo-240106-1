@@ -4,4 +4,7 @@ phonebook = {
     "06305427578": {"name":"Tamás", "address":"Pécs", "email": "tamas@gmail.com"},
 }
 
-print(phonebook["06305427578"])
+print(phonebook["06201234567"])
+print(phonebook["06201234567"]["name"])
+print(phonebook["06201234567"]["address"])
+print(phonebook["06201234567"]["email"])
