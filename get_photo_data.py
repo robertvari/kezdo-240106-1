@@ -1,7 +1,7 @@
 import os
 
 # r = raw string
-dir_path = input("Give me a folder path where you store photos:")
+dir_path = r"D:\Work\_PythonSuli\kezdo-240106\alapok_1\photos"
 
 # check folder validity
 while not os.path.exists(dir_path):
@@ -11,4 +11,13 @@ while not os.path.exists(dir_path):
 # Collect files in this folder
 file_list = os.listdir(dir_path)
 
-print(file_list)
+allowed_extensions = [".jpg", ".jpeg"]
+
+for file_name in file_list:
+    # unpacking values from splittext()
+    name, ext = os.path.splitext(file_name)  # IMG_1069.JPG = IMG_1069, .JPG
+    
+    if not ext.lower() in allowed_extensions:
+        continue
+
+    print(file_name)
