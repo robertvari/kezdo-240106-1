@@ -13,11 +13,15 @@ file_list = os.listdir(dir_path)
 
 allowed_extensions = [".jpg", ".jpeg"]
 
+# filter out unwanted files
+photos = []  # create a container for storing only photo files
 for file_name in file_list:
     # unpacking values from splittext()
-    name, ext = os.path.splitext(file_name)  # IMG_1069.JPG = IMG_1069, .JPG
+    name, ext = os.path.splitext(file_name)  # os.path.splittext() = IMG_1069, .JPG
     
+    # check if extension in allowed_extension
     if not ext.lower() in allowed_extensions:
         continue
 
-    print(file_name)
+    # add this file to photos
+    photos.append(file_name)
