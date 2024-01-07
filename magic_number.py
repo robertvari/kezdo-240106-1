@@ -12,11 +12,14 @@ print("-"*50)
 print(f"I have number between 1 and {max_number}. Can you guess it?")
 print("-"*50)
 
-magic_number = random.randint(1, max_number)
+# get a random number
+magic_number = str( random.randint(1, max_number) )
 print(f"DEBUG magic_number: {magic_number}")
 
-player_number = int( input("What is my magic number?") )
+# ask the player for the number
+player_number = input("What is my magic number?")
 
+# check player's number
 while magic_number != player_number:
     max_tries -= 1
 
@@ -25,6 +28,7 @@ while magic_number != player_number:
         exit()
 
     print(f"Wrong, try again. You have {max_tries} left.")
-    player_number = int( input("What is my magic number?") )
+    player_number = input("What is my magic number?")
 
+# player wins
 print(f"You win! {magic_number} was my number!!!")
