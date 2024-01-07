@@ -10,4 +10,10 @@ input_password = input("Password:")
 if email == input_email and password == input_password:
     print("Wellcome back!")
 else:
-    print("email or password is not correct. Try again.")
+    if email != input_email:
+        print("Email is not correct.")
+    
+    if password != input_password:
+        print("Password is not correct.")
+    
+    print("Try again.")
