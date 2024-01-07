@@ -1,4 +1,6 @@
 import os
+from PIL import Image
+
 
 # ----------------------------- Collect image files (.jpg, .jpeg) from folder ------------------------
 # r = raw string
@@ -27,6 +29,15 @@ for file_name in file_list:
     photos.append(os.path.join(dir_path, file_name))
 
 
-# ----------------------------- Collect meta data (exif data) from image files ------------------------
+# ----------------------------- Collect data from image files ------------------------
+photo_data = {}
 for image_file in photos:
-    print(image_file)
+    img = Image.open(image_file)
+    image_size = img.size
+    
+    photo_data[image_file] = {"width": image_size[0], "height": image_size[1]}
+
+
+# --------------------------- Save data to a file ------------------------------------
+with open("photo_data.txt", "w") as file:
+    file.write(str(photo_data))
