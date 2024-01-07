@@ -1,5 +1,6 @@
 import os
 
+# ----------------------------- Collect image files (.jpg, .jpeg) from folder ------------------------
 # r = raw string
 dir_path = r"D:\Work\_PythonSuli\kezdo-240106\alapok_1\photos"
 
@@ -11,9 +12,8 @@ while not os.path.exists(dir_path):
 # Collect files in this folder
 file_list = os.listdir(dir_path)
 
-allowed_extensions = [".jpg", ".jpeg"]
-
 # filter out unwanted files
+allowed_extensions = [".jpg", ".jpeg"]
 photos = []  # create a container for storing only photo files
 for file_name in file_list:
     # unpacking values from splittext()
@@ -24,4 +24,9 @@ for file_name in file_list:
         continue
 
     # add this file to photos
-    photos.append(file_name)
+    photos.append(os.path.join(dir_path, file_name))
+
+
+# ----------------------------- Collect meta data (exif data) from image files ------------------------
+for image_file in photos:
+    print(image_file)
