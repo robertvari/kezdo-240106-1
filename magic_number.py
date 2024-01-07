@@ -14,7 +14,7 @@ print("-"*50)
 
 # get a random number
 magic_number = str( random.randint(1, max_number) )
-print(f"DEBUG magic_number: {magic_number}")
+# print(f"DEBUG magic_number: {magic_number}")
 
 # ask the player for the number
 player_number = input("What is my magic number?")
